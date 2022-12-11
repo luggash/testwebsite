@@ -1,10 +1,12 @@
 import copy
-import os
+# import os
 # import colorama
 import networkx as nx
 # import matplotlib.pyplot as plt # ; plt.ion
 # import netgraph
 
+
+import js
 
 
 """
@@ -21,6 +23,7 @@ row9=[" "," ","5"," ","1"," ","3"," "," "]
 
 AI?
 """
+"""
 row1 = [" ", " ", " ", "7", " ", " ", "8", " ", " "]
 row2 = [" ", " ", "6", " ", " ", " ", " ", "3", "1"]
 row3 = [" ", "4", " ", " ", " ", "2", " ", " ", " "]
@@ -30,7 +33,7 @@ row6 = [" ", " ", " ", " ", "6", " ", "2", "9", " "]
 row7 = [" ", " ", " ", "8", " ", " ", " ", "7", " "]
 row8 = ["8", "6", " ", " ", " ", " ", "5", " ", " "]
 row9 = [" ", " ", "2", " ", " ", "6", " ", " ", " "]
-
+"""
 """
 expert
 row1=[" "," ","5","6"," ","2"," "," "," "]
@@ -43,7 +46,14 @@ row7=[" "," "," ","9","4"," ","8"," ","2"]
 row8=["3"," ","6","1"," "," "," "," "," "]
 row9=[" "," "," "," "," "," "," "," "," "]
 """
-rows = [row1, row2, row3, row4, row5, row6, row7, row8, row9]
+
+
+
+# rows = [row1, row2, row3, row4, row5, row6, row7, row8, row9]
+# rowsFromJs = [row1_js.to_py(), row2_js.to_py(), row3_js.to_py(), row4_js.to_py(), row5_js.to_py(), row6_js.to_py(), row7_js.to_py(), row8_js.to_py(), row9_js.to_py()]
+rows = allrows_js.to_py()
+print("py: rows", rows)
+
 potentialSolutions = copy.deepcopy(rows)
 
 # colorama.init()
@@ -102,6 +112,7 @@ def gridComplete():
         if " " in row:
             return False
     print("solved!")
+    #allrows_js = rows
     return True
 
 
